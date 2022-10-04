@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 
 theme: jekyll-theme-minimal
-title: Wave UI Automation
+title: Tidal Wave
 description: Java based UI Test Automation
 baseurl: "wave.docs" # the subpath of your site, e.g. /blog
 # url: "https://tidal-code.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
