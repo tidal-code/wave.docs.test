@@ -9,10 +9,10 @@ permalink: /
 # Focus on writing good Test Automation
 {: .fs-9 }
 
-Forget about handling waits, iframes or overlay spinners. You can write concise, simple automation tests with Sqsite Automation Libary. No need to worry about dependency injection, object initializing, constructors etc..
+Forget about handling waits, iframes or overlay spinners. You can write concise, simple automation tests with Wave Automation Libary. No need to worry about dependency injection, object initializing, constructors etc..
 {: .fs-5 .fw-350 }
 
-[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/sqsite/auto.browser){:target='_blank'}{: .btn .fs-5 .mb-4 .mb-md-0 }
+[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/tidal-code/Wave){:target='_blank'}{: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
@@ -20,23 +20,23 @@ Forget about handling waits, iframes or overlay spinners. You can write concise,
 
 ### Dependencies
 
-Tidal Wave UI automation library is built with Java and [Selenium](https://www.selenium.dev){:target='_blank'}. View the [quick start guide](https://github.com/sqsite/auto.browser#sqsite){:target='_blank'} for more information. It requires no additional setup other than downloading the maven dependency. You can write static methods as the main base framework methods are static functions. There is no need to use dependency injection as well. The framework will take care of initialising the browser and executing the tests.
+Tidal Wave UI automation library is built with Java and [Selenium](https://www.selenium.dev){:target='_blank'}. View the [quick start guide](https://github.com/tidal-code/Wave){:target='_blank'} for more information. It requires no additional setup other than downloading the maven dependency. You can write static methods as the main base framework methods are static functions. There is no need to use dependency injection as well. The framework will take care of initialising the browser and executing the tests.
 
 ### Add the following Maven dependency to your pom.xml file
 
 {: .pt-4 }
-Sqsite is hosted with [Maven Central](https://mvnrepository.com/search?q=sqsite){:target='_blank'}
+Wave is hosted with [Maven Central](https://mvnrepository.com/search?q=tidal-code){:target='_blank'}
 
 ```xml
         <dependency>
-            <groupId>io.github.sqsite</groupId>
-            <artifactId>auto.browser</artifactId>
-            <version>0.0.4</version>
+            <groupId>io.github.tidal-code</groupId>
+            <artifactId>wave</artifactId>
+            <version>0.0.0</version>
         </dependency>
 ```
 <small>For projects using Gradle, use </small>
 ```yml
-implementation group: 'io.github.sqsite', name: 'auto.browser', version: '0.0.3'
+implementation group: 'io.github.tidal-code', name: 'wave', version: '0.0.0'
 ```
 
 ### To start the browser
@@ -100,12 +100,12 @@ findAll("linkText:User Names").get(3).click();
 There is no extra effort needed to add waits, scripts to handle overlapping spinners, wait for background processes to finish.
 Just plain simple methods which would emulate user interactions.
 
-Call simple static methods `find()` and `findAll()` to locate your element(s). If your element is inside an iframe, don't worry; you do not need to switch to it. Sqsite will find it. If you are blocked with a spinner and need to wait for it do disappear to click on an element, it will be handled. Just call the `find()` method and the rest will be done for  you.
+Call simple static methods `find()` and `findAll()` to locate your element(s). If your element is inside an iframe, don't worry; you do not need to switch to it. Wave will find it. If you are blocked with a spinner and need to wait for it do disappear to click on an element, it will be handled. Just call the `find()` method and the rest will be done for  you.
 
 
 ## About the project
 
-Sqsite is maintained by [Philip Kurian](https://www.linkedin.com/in/kurianphilipk/)(author) and other community contributors
+Wave is maintained by [Philip Kurian](https://www.linkedin.com/in/kurianphilipk/)(author) and other community contributors
 
 ### License
 
@@ -114,7 +114,7 @@ Distributed by an [MIT license](https://github.com/pmarsceill/just-the-docs/tree
 ### Contributing
 
 When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change. Read more about becoming a contributor in [our GitHub repo](https://github.com/sqsite/auto.browser#sqsite).
+email, or any other method with the owners of this repository before making a change. Read more about becoming a contributor in [our GitHub repo](https://github.com/tidal-code/Wave#readme).
 
 
 <!-- #### Thank you to the contributors of Just the Docs!

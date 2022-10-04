@@ -15,7 +15,7 @@ You can find more information about Jasypt [here](http://www.jasypt.org){:target
 To encrypt or decrypt your passwords or secret values, refer 
 [this](https://www.devglan.com/online-tools/jasypt-online-encryption-decryption){:target='_blank'}
 
-To make Sqsite aware of the password encryption; wrap your hashed(encrypted) string with ENC().
+To make Wave aware of the password encryption; wrap your hashed(encrypted) string with ENC().
  Otherwise the framework will treat it like a normal string. For example if your hashed string is `XKdtKa1jZ6YcJ5exkrBaBu3/ysUtAkvW`, 
  you should wrap it like `ENC(XKdtKa1jZ6YcJ5exkrBaBu3/ysUtAkvW)`.
 You should supply the secret value as an environment property. 

@@ -15,7 +15,7 @@ most methods are designed to emulate user interactions with a Web Application.
 
 To begin your understanding about the process to interact with a Web UI, we assume that you
 are familiar with how to locate an element. If not; you can find the details [here.](https://www.selenium.dev/documentation/webdriver/elements/locators/){:target='_blank'} Once you identify the 
-locator, pass that information to Sqsite library as a string. There is no option to pass ***Selenium
+locator, pass that information to Wave UI Automation library as a string. There is no option to pass ***Selenium
 By locator***. Instead you have to prefix the locator type with your locator.
 ```java
 find("id:some_id").click();
