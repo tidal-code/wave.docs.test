@@ -17,7 +17,7 @@
 theme: jekyll-theme-minimal
 title: Wave UI Automation
 description: Java based UI Test Automation
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "wave.docs" # the subpath of your site, e.g. /blog
 # url: "https://sqsite.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
