@@ -9,7 +9,7 @@ permalink: /
 # Focus on writing good Test Automation
 {: .fs-9 }
 
-Forget about handling waits, iframes or overlay spinners. You can write concise, simple automation tests with Wave Automation Libary. No need to worry about dependency injection, object initializing, constructors etc..
+Forget about handling waits, iframes or overlay spinners. You can write concise, simple automation tests with Tidal Wave Automation Libary. No need to worry about dependency injection, object initializing, constructors etc..
 {: .fs-5 .fw-350 }
 
 [Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/tidal-code/Wave){:target='_blank'}{: .btn .fs-5 .mb-4 .mb-md-0 }
@@ -20,12 +20,12 @@ Forget about handling waits, iframes or overlay spinners. You can write concise,
 
 ### Dependencies
 
-Tidal Wave UI automation library is built with Java and [Selenium](https://www.selenium.dev){:target='_blank'}. View the [quick start guide](https://github.com/tidal-code/Wave){:target='_blank'} for more information. It requires no additional setup other than downloading the maven dependency. You can write static methods as the main base framework methods are static functions. There is no need to use dependency injection as well. The framework will take care of initialising the browser and executing the tests.
+Tidal UI automation library is built with Java and [Selenium](https://www.selenium.dev){:target='_blank'}. View the [quick start guide](https://github.com/tidal-code/Wave){:target='_blank'} for more information. It requires no additional setup other than downloading the maven dependency. You can write static methods as the main base framework methods are static functions. There is no need to use dependency injection as well. The framework will take care of initialising the browser and executing the tests.
 
 ### Add the following Maven dependency to your pom.xml file
 
 {: .pt-4 }
-Wave is hosted with [Maven Central](https://mvnrepository.com/search?q=tidal-code){:target='_blank'}
+Tidal is hosted with [Maven Central](https://mvnrepository.com/search?q=tidal-code){:target='_blank'}
 
 ```xml
         <dependency>
@@ -100,12 +100,12 @@ findAll("linkText:User Names").get(3).click();
 There is no extra effort needed to add waits, scripts to handle overlapping spinners, wait for background processes to finish.
 Just plain simple methods which would emulate user interactions.
 
-Call simple static methods `find()` and `findAll()` to locate your element(s). If your element is inside an iframe, don't worry; you do not need to switch to it. Wave will find it. If you are blocked with a spinner and need to wait for it do disappear to click on an element, it will be handled. Just call the `find()` method and the rest will be done for  you.
+Call simple static methods `find()` and `findAll()` to locate your element(s). If your element is inside an iframe, don't worry; you do not need to switch to it. Tidal will find it. If you are blocked with a spinner and need to wait for it do disappear to click on an element, it will be handled. Just call the `find()` method and the rest will be done for  you.
 
 
 ## About the project
 
-Wave is maintained by [Philip Kurian](https://www.linkedin.com/in/kurianphilipk/)(author) and other community contributors
+Tidal is maintained by [Philip Kurian](https://www.linkedin.com/in/kurianphilipk/)(author) and other community contributors
 
 ### License
 

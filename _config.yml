@@ -66,7 +66,7 @@ heading_anchors: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "Wave on GitHub":
+  "Tidal on GitHub":
     - "//github.com/tidal-code/Wave"
 
 # Makes Aux links open in a new tab. Default is false

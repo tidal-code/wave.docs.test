@@ -11,7 +11,7 @@ Selenium provides us to locate an element by **By** class static methods.
 Wave handles the locators slightly differently. The locators are supplied 
 as a string prefixed with the locator types as shown in the table below.
 
-| Type | Selenium Function|  Wave Libary Method
+| Type | Selenium Function|  Tidal Wave Libary Method
 |:-------------|:------------------| :------------------|
 | id | By.id(\"some_id\") | find(\"id:some_id\") |
 | name | By.name(\"some_name\") | find(\"name:some_name\") |
@@ -24,14 +24,14 @@ as a string prefixed with the locator types as shown in the table below.
 
 To locate an element by its title
 
-| Type | Selenium Function|  Wave Libary Method
+| Type | Selenium Function|  Tidal Wave Libary Method
 |:-------------|:------------------| :------------------|
 | title | By.xpath("//*[title='title value']| find(\"title:title value\") |
 
 
 To locate an element by its text value
 
-| Type | Selenium Function|  Wave Library Method
+| Type | Selenium Function|  Tidal Wave Library Method
 |:-------------|:------------------| :------------------|
 | text | By.xpath("//*[text()='text value']| find(\"text value\") |
 
