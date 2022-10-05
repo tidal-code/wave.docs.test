@@ -25,7 +25,7 @@ Tidal UI automation library is built with Java and [Selenium](https://www.seleni
 ### Add the following Maven dependency to your pom.xml file
 
 {: .pt-4 }
-Tidal is hosted with [Maven Central](https://mvnrepository.com/search?q=tidal-code){:target='_blank'}
+Tidal is hosted with [Maven Central](https://mvnrepository.com/artifact/io.github.tidal-code){:target='_blank'}
 
 ```xml
         <dependency>
