@@ -118,11 +118,13 @@
   padding-top: $sp-3;
   padding-bottom: $sp-3;
   color: $body-heading-color;
-  @include fs-6;
+  @include fs-9;
 
   @include mq(md) {
     padding-top: $sp-2;
     padding-bottom: $sp-2;
+    color: #680851;
+    font-weight: bold;
   }
 }
 

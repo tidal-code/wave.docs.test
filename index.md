@@ -20,7 +20,7 @@ Forget about handling waits, iframes or overlay spinners. You can write concise,
 
 ### Dependencies
 
-Tidal UI automation library is built with Java and [Selenium](https://www.selenium.dev){:target='_blank'}. View the [quick start guide](https://github.com/tidal-code/Wave){:target='_blank'} for more information. It requires no additional setup other than downloading the maven dependency. You can write static methods as the main base framework methods are static functions. There is no need to use dependency injection as well. The framework will take care of initialising the browser and executing the tests.
+Tidal Wave UI automation library is built with Java and [Selenium](https://www.selenium.dev){:target='_blank'}. View the [quick start guide](https://github.com/tidal-code/Wave){:target='_blank'} for more information. It requires no additional setup other than downloading the maven dependency. You can write static methods as the main base framework methods are static functions. There is no need to use dependency injection as well. The framework will take care of initialising the browser and executing the tests.
 
 ### Add the following Maven dependency to your pom.xml file
 
