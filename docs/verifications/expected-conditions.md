@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Responsive Modifiers
+title: Expected Conditions
 parent: Verifications
 ---
 
