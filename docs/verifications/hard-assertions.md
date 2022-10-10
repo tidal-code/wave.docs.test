@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Layout
+title: Hard Assertions
 parent: Verifications
 ---
 

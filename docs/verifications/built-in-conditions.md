@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Color
+title: Built In Conditions
 parent: Verifications
 ---
 
