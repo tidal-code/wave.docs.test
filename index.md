@@ -20,23 +20,23 @@ Forget about handling waits, iframes or overlay spinners. You can write concise,
 
 ### Dependencies
 
-Tidal Wave UI automation library is built with Java and [Selenium](https://www.selenium.dev){:target='_blank'}. View the [quick start guide](https://github.com/tidal-code/Wave){:target='_blank'} for more information. It requires no additional setup other than downloading the maven dependency. You can write static methods as the main base framework methods are static functions. There is no need to use dependency injection as well. The framework will take care of initialising the browser and executing the tests.
+Tidal Wave UI automation library is built with Java and [Selenium](https://www.selenium.dev){:target='_blank'}. View the [quick start guide](https://github.com/tidal-code/Wave){:target='_blank'} for more information. It requires no additional setup other than downloading the maven dependency. 
 
 ### Add the following Maven dependency to your pom.xml file
 
 {: .pt-4 }
-Tidal is hosted with [Maven Central](https://mvnrepository.com/artifact/io.github.tidal-code/wave){:target='_blank'}
+Tidal is hosted with [Maven Central](https://mvnrepository.com/artifact/io.github.tidal-code/wave){:target='_blank'}. For detailed version information, check the 'Versions' page under the 'Detailed Docs' section. 
 
 ```xml
         <dependency>
             <groupId>io.github.tidal-code</groupId>
             <artifactId>wave</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
 ```
 <small>For projects using Gradle, use </small>
 ```yml
-implementation group: 'io.github.tidal-code', name: 'wave', version: '1.0.0'
+implementation group: 'io.github.tidal-code', name: 'wave', version: '1.0.1'
 ```
 
 ### To start the browser
