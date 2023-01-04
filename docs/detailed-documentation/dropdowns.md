@@ -17,4 +17,4 @@ select(int index); //index value of elements
 ```
 
 Many web applications may not have dropdown types as \'select\'. You might need to add extra
-user interations to select an element from those types of dropdowns.
+user interactions to select an element from those types of dropdowns. For example you might need to click on a drop down arrow and then click on one of the values shown.
