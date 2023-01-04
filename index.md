@@ -12,7 +12,8 @@ permalink: /
 Forget about handling waits, iframes or overlay spinners. You can write concise, simple automation tests with Tidal Wave Automation Libary. No need to worry about dependency injection, object initializing, constructors etc..
 {: .fs-5 .fw-350 }
 
-[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/tidal-code/Wave){:target='_blank'}{: .btn .fs-5 .mb-4 .mb-md-0 }
+[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } 
+<!-- [View it on GitHub](https://github.com/tidal-code/Wave){:target='_blank'}{: .btn .fs-5 .mb-4 .mb-md-0 } -->
 
 ---
 
@@ -20,7 +21,7 @@ Forget about handling waits, iframes or overlay spinners. You can write concise,
 
 ### Dependencies
 
-Tidal Wave UI automation library is built with Java and [Selenium](https://www.selenium.dev){:target='_blank'}. View the [quick start guide](https://github.com/tidal-code/Wave){:target='_blank'} for more information. It requires no additional setup other than downloading the maven dependency. 
+Tidal Wave UI automation library is built with Java and [Selenium](https://www.selenium.dev){:target='_blank'}. It requires no additional setup other than downloading the maven dependency. 
 
 ### Add the following Maven dependency to your pom.xml file
 
@@ -111,10 +112,10 @@ Tidal is maintained by [Philip Kurian](https://www.linkedin.com/in/kurianphilipk
 
 Distributed by an [MIT license](https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt).
 
-### Contributing
+<!-- ### Contributing
 
 When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change. Read more about becoming a contributor in [our GitHub repo](https://github.com/tidal-code/Wave#readme).
+email, or any other method with the owners of this repository before making a change. Read more about becoming a contributor in [our GitHub repo](https://github.com/tidal-code/Wave#readme). -->
 
 
 <!-- #### Thank you to the contributors of Just the Docs!
