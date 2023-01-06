@@ -21,7 +21,7 @@ Forget about handling waits, iframes or overlay spinners. You can write concise,
 
 ### Dependencies
 
-Tidal Wave UI automation library is built with Java and [Selenium](https://www.selenium.dev){:target='_blank'}. It requires no additional setup other than downloading the maven dependency. 
+Tidal Wave UI automation library is built with Java and [Selenium](https://www.selenium.dev){:target='_blank'}. It requires no additional setup other than downloading the maven dependency. You can use any of your favourite test runner like Junit, TestNG etc. 
 
 ### Add the following Maven dependency to your pom.xml file
 
@@ -78,10 +78,15 @@ Browser.type("edge");
 // combining all these options as an example for Edge browser
 EdgeOptions options = new EdgeOptions();
 options.setHeadless(true);
+
 Browser.withWaitTime(Duration.ofSeconds(15))
       .type("edge")
       .withOptions(options)
       .open("https://google.co.nz");
+
+ // your test scripts would go here... 
+
+//finally     
 Browser.close();
 ```
 
