@@ -44,6 +44,6 @@ For example `//div[name='user_name']` can be passed over to the framework like `
 If it is a partial match you can use `find("div contains name user")`
 
 If the property contains special characters or white spaces, you can enclose them in single quotes
-`find("div contains name 'user name'")`
+`find("div contains text 'User Login'")`
 
 
