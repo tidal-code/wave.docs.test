@@ -19,7 +19,7 @@ find("element").shouldBe(enabled);
 find("element").shouldBe(notEnabled);
 ```
 
-Examaples for verifying the element's Data
+Examaples for verifying the element's Data:
 
 ```java
 find("element").shouldHave(exactText("Text Value"));
@@ -30,7 +30,7 @@ find("element").shouldHave(matchingText("Text Value"));
 find("element").shouldHave(textNotNull);
 ```
 
-Examples for verifying a collection data set
+Examples for verifying a collection data set:
 
 ```java
 findAll("element").shouldHave(size(int size));

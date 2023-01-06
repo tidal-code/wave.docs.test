@@ -34,7 +34,7 @@ configuration.properties
 
 The first two files - controller.properties and application-{test environment}.properties should be put inside the folder ```test/resources/properties```
 
-The property value can be read as a string using the method ```PropertiesFinder.readProperty("key")```;
+The property value can be read as a string using the method ```PropertiesFinder.getProperty("key")```
 
 
 ## Data Read Order
