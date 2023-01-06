@@ -32,12 +32,13 @@ Tidal is hosted with [Maven Central](https://mvnrepository.com/artifact/io.githu
         <dependency>
             <groupId>io.github.tidal-code</groupId>
             <artifactId>wave</artifactId>
-            <version>1.0.1</version>
+            <version>1.1.0</version>
         </dependency>
 ```
-<small>For projects using Gradle, use </small>
+
+For projects using Gradle, use
 ```yml
-implementation group: 'io.github.tidal-code', name: 'wave', version: '1.0.1'
+implementation group: 'io.github.tidal-code', name: 'wave', version: '1.1.0'
 ```
 
 ### To start the browser
