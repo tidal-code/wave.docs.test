@@ -5,7 +5,10 @@ parent: Detailed Docs
 nav_order: 1
 ---
 
-# Version 1.1.0
+# Version 1.1.0 
+
+New release
+{: .label .label-purple }
 
 Added custom expectation failure message
 
