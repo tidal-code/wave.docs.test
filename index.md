@@ -15,13 +15,34 @@ Forget about handling waits, iframes or overlay spinners. You can write concise,
 [Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } 
 <!-- [View it on GitHub](https://github.com/tidal-code/Wave){:target='_blank'}{: .btn .fs-5 .mb-4 .mb-md-0 } -->
 
+### Need of a framework
+
+What is the need of a framework? Typically, when you use Selenium you might have to write a lot of code to stabilise the run. Selenium is not flaky, it does exactly what it is supposed to do. In fact, we can say our web applications are flaky.
+A lot of environmental factors make our applications slow. Typical web applications are made up of lots of AJAX componens which load independently to give users a seemless experience. They enable the information on the page to get updated without 
+a full page refresh. For test automation libaries like Selenium, this is a challenge as they have no in-built wait times. 
+
+If you go to [Selenium Website](https://www.selenium.dev){:target='_blank'}, you would read this: 
+<br>
+<br>
+**Selenium automates browsers. That's it! What you do with that power is entirely up to you.**
+
+Typically Selenium will wait for your page to be ready before it starts the interaction. But it wouldn't know if your Ajax page components are yet to load. Selenium would never know some text on your page is going to change 
+after a few seconds. These are the situations where you would need to write some custom wait methods when you use raw Selenium. The frameworks which claim to do without these custom waits would some times unnecessarily slow down the test execution.
+
+If these efforts can be reduced, the test automation engineers can focus more on designing better automation scenarios. The creative energy of the test automation engineer should focus on deriving the most efficient, faster tests rather than fixing
+the flakiness of the test run. Tidal - Wave test automation library is trying to achieve this. It is designed on the assumption that, there is no wait required initially expecting the element to be present in the application. If no element is found,
+it will enter the wait mode by itself. It has a default wait time of 5 seconds which can be configured to a higher or lower value if needed.
+
+
+
 ---
 
 ## Getting started
 
 ### Dependencies
 
-Tidal Wave UI automation library is built with Java and [Selenium](https://www.selenium.dev){:target='_blank'}. It requires no additional setup other than downloading the maven dependency. You can use any of your favourite test runner like Junit, TestNG etc. 
+Tidal Wave UI automation library is built with Java and [Selenium](https://www.selenium.dev){:target='_blank'}. It requires no additional setup other than downloading the maven dependency. 
+For running tests, you can use any of your favourite test runner like Junit, TestNG etc. 
 
 ### Add the following Maven dependency to your pom.xml file
 
