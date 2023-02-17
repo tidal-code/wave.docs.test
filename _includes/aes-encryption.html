@@ -49,12 +49,36 @@
 <h1> About Encryption </h1>
 
     <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum mauris vitae quam ultricies, vel dignissim turpis euismod. Suspendisse eget odio tristique, vulputate dui sed, vestibulum mi. Vivamus imperdiet ante in nisi placerat tincidunt. Duis euismod turpis quis eros pulvinar, vel tempor nisl malesuada. Fusce varius orci id diam congue, non volutpat ipsum finibus. Nulla eget orci semper, venenatis nisl et, ornare risus. Ut vel purus vel elit tincidunt fermentum a sed nibh.
+        AES256 encryption is a widely used encryption algorithm that uses a 256-bit key to encrypt 
+        and decrypt data. It is considered to be a strong encryption algorithm and is widely used 
+        to protect sensitive data, including passwords.
 
-Sed laoreet libero vel lorem efficitur, et vehicula magna vehicula. Sed quis sem eget quam dapibus ullamcorper. Vestibulum luctus eros sed massa euismod scelerisque. Nunc sodales volutpat leo, non tristique dolor cursus id. Sed vitae augue ex. Maecenas convallis leo in justo eleifend, ut faucibus quam vulputate. Quisque maximus, nulla eget vestibulum ultricies, odio mauris auctor sapien, ut dictum libero augue vel massa.
+      </p>
+<p>
+        When you use AES256 encryption to store passwords for test automation, you are essentially 
+        taking the password and converting it into an encrypted format that can only be read by 
+        someone with the encryption key. This means that even if someone gains access to your 
+        password, they will not be able to read the passwords without the encryption key.
 
-Proin tristique, ex id semper vulputate, dui mi convallis est, eu bibendum ipsum tellus at nisl. Nulla facilisi. Nam rhoncus euismod lacus, eget sollicitudin turpis lacinia at. In at commodo purus. Suspendisse potenti. Nulla facilisi. Aenean imperdiet, elit sed efficitur rutrum, urna dolor vehicula quam, ut lobortis nisl massa vel metus.
     </p>
+
+    <p>
+
+        When storing passwords using AES256 encryption, it's important to keep the encryption key 
+        secure. Ideally, the encryption key should be stored separately from the password database 
+        to prevent unauthorized access. Additionally, you should ensure that the key is only 
+        accessible to authorized personnel who require access to the password database.
+
+    </p>
+
+    <p>
+        Note: This page would give you the encryption key wrapped with "ENC()". The Tidal.Wave 
+        framework would need this wrapping to identify the string as an encrypted password. 
+        If you are using your own password decryption scripts, please exclude the wrapper or 
+        take into consideration that the ENC() part is not part of the actual encryption string.
+    </p>
+
+   <hr>
 
     <div id="encryption-section" class="section">
         <h2>Encryption</h2>
