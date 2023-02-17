@@ -1,0 +1,189 @@
+<html>
+
+<head>
+    <title>AES Encryption and Decryption Example</title>
+    <style>
+        .enc,
+        textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #5739ce;
+            background-image: linear-gradient(#6f55d5, #5739ce);
+            color: #fff;
+            font-size: 14px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 4px 10px rgba(0, 0, 0, 0.12);
+        }
+
+        button:hover {
+            background-color: #6f55d5;
+            background-image: none;
+        }
+
+        button:active {
+            background-color: #5739ce;
+            background-image: none;
+            box-shadow: none;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1> About Encryption </h1>
+
+    <p>
+        AES256 encryption is a widely used encryption algorithm that uses a 256-bit key to encrypt 
+        and decrypt data. It is considered to be a strong encryption algorithm and is widely used 
+        to protect sensitive data, including passwords.
+
+      </p>
+<p>
+        When you use AES256 encryption to store passwords for test automation, you are essentially 
+        taking the password and converting it into an encrypted format that can only be read by 
+        someone with the encryption key. This means that even if someone gains access to your 
+        password, they will not be able to read the passwords without the encryption key.
+
+    </p>
+
+    <p>
+
+        When storing passwords using AES256 encryption, it's important to keep the encryption key 
+        secure. Ideally, the encryption key should be stored separately from the password database 
+        to prevent unauthorized access. Additionally, you should ensure that the key is only 
+        accessible to authorized personnel who require access to the password database.
+
+    </p>
+
+    <p>
+        Note: This page would give you the encryption key wrapped with "ENC()". The Tidal.Wave 
+        framework would need this wrapping to identify the string as an encrypted password. 
+        If you are using your own password decryption scripts, please exclude the wrapper or 
+        take into consideration that the ENC() part is not part of the actual encryption string.
+    </p>
+
+   <hr>
+
+    <div id="encryption-section" class="section">
+        <h2>Encryption</h2>
+        <br>
+        <label for="messageToEncrypt">Value to encrypt:</label>
+        <input class="enc" type="text" id="messageToEncrypt">
+
+        <label for="encryptorKey">Encryption key:</label>
+        <input id="encryptorKey" type="text" class="enc">
+
+        <p id="error-message" class="error"></p>
+
+        <button type="button" onclick="encrypt()">Encrypt</button>
+
+        <h3>Encrypted value:</h3>
+        <textarea class="outputresult" id="encryptedMessage" rows="5"></textarea>
+    </div>
+
+    <hr>
+
+    <div id="decryption-section" class="section">
+        <h2>Decryption</h2>
+        <br>
+        <label for="encryptedMessageToDecrypt">Encrypted value:</label>
+        <textarea id="encryptedMessageToDecrypt" rows="5"></textarea>
+
+        <label for="decryptorKey">Decryption key:</label>
+        <input id="decryptorKey" type="text" class="enc">
+
+        <button type="button" onclick="decrypt()">Decrypt</button>
+
+        <h3>Decrypted value:</h3>
+        <textarea class="outputresult" id="decryptedMessage" rows="5"></textarea>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script>
+        function encryptWithAes256(messageToEncrypt, encryptorKey) {
+            var salt = CryptoJS.lib.WordArray.random(128 / 8);
+            var key = CryptoJS.PBKDF2(
+                encryptorKey,
+                salt,
+                { keySize: 256 / 32, iterations: 1000, hasher: CryptoJS.algo.SHA512 }
+            );
+            var iv = CryptoJS.lib.WordArray.random(128 / 8);
+            var cipherText = CryptoJS.AES.encrypt(messageToEncrypt, key, { iv: iv });
+            var encryptedData = salt.clone().concat(iv).concat(cipherText.ciphertext);
+            var encryptedDataB64 = "ENC(" + encryptedData.toString(CryptoJS.enc.Base64) + ")";
+            return encryptedDataB64;
+        }
+
+        function decryptWithAes256(encryptedMessage, decryptorKey) {
+            encryptedMessage = encryptedMessage.replace("ENC(", "");
+            encryptedMessage = encryptedMessage.replace(")", "");
+            var encryptedData = CryptoJS.enc.Base64.parse(encryptedMessage);
+            var salt = encryptedData.clone().words.slice(0, 4);
+            var iv = encryptedData.clone().words.slice(4, 8);
+            var cipherText = encryptedData.clone().words.slice(8);
+            var key = CryptoJS.PBKDF2(
+                decryptorKey,
+                CryptoJS.lib.WordArray.create(salt),
+                { keySize: 256 / 32, iterations: 1000, hasher: CryptoJS.algo.SHA512 }
+            );
+            var decryptedData = CryptoJS.AES.decrypt(
+                { ciphertext: CryptoJS.lib.WordArray.create(cipherText) },
+                key,
+                { iv: CryptoJS.lib.WordArray.create(iv) }
+            );
+            var decryptedText = decryptedData.toString(CryptoJS.enc.Utf8);
+            return decryptedText;
+        }
+
+
+        function encrypt() {
+            var messageToEncrypt = document.getElementById('messageToEncrypt').value;
+            var encryptorKey = document.getElementById('encryptorKey').value;
+
+            if (!messageToEncrypt || !encryptorKey) {
+                document.getElementById('error-message').textContent = 'Please fill in both text and key fields.';
+                return;
+            }
+            var encryptedMessage = encryptWithAes256(messageToEncrypt, encryptorKey);
+            document.getElementById('encryptedMessage').value = encryptedMessage;
+        }
+
+        function decrypt() {
+            var encryptedMessageToDecrypt = document.getElementById('encryptedMessageToDecrypt').value;
+            var decryptorKey = document.getElementById('decryptorKey').value;
+
+            var decryptedMessage = decryptWithAes256(encryptedMessageToDecrypt, decryptorKey);
+            document.getElementById('decryptedMessage').value = decryptedMessage;
+        }
+
+        function autoCopyTextarea() {
+            const textarea = document.getElementById('encryptedMessage');
+
+            textarea.addEventListener('click', () => {
+                textarea.select();
+                document.execCommand('copy');
+            });
+        }
+
+        autoCopyTextarea();
+    </script>
+
+</body>
+
+</html>

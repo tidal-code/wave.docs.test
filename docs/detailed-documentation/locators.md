@@ -20,7 +20,7 @@ as a string prefixed with the locator types as shown in the table below.
 | xpath | By.xpath(\"//xpath\")| find(\"//xpath\") |
 | css selector | By.cssSelector(\"css selector")| find(\"css: css selector") |
 | link text | By.linkText(\"link text")| find(\"linkText:link text") |
-| partial link text | By.partilaLinkText(\"partial link text")| find(\"partialLinkText:partial link text") |
+| partial link text | By.partialLinkText(\"partial link text")| find(\"partialLinkText:partial link text") |
 
 To locate an element by its title
 
