@@ -14,7 +14,9 @@ Most of the times, Selenium will automatically do that. If it fails to do so and
 fails with messages such as element not interactable or element hidden behind another element etc, we might
 need to bring it to view. For that use
 
-```find("locator").scrollToView()```    
+```java
+find("locator").scrollToView();
+```    
 
 
 
