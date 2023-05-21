@@ -2,7 +2,7 @@
 layout: default
 title: Click Methods
 parent: Detailed Docs
-nav_order: 3
+nav_order: 4
 ---
 
 # Click Methods

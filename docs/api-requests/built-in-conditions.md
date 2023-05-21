@@ -1,12 +1,13 @@
 ---
 layout: default
 title: Built In Conditions
-parent: Verifications
+parent: Conditions
 ---
 
 # Built In Conditions
 
-Built in conditions are not verifications by itself. But they can be used for UI compoents verification at the same time as well. 
+Built in conditions are not verifications by themselves. They can be used for UI compoents verifications. 
+For proper end to end test verification, use Tidal Flow assertion library. 
 
 Examples for verifying elements of a UI:
 

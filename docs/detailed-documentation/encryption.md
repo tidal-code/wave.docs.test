@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Encryption
+title: Password Encryption
 parent: Detailed Docs
-nav_order: 6A
+nav_order: 11
 ---
 
 {% include aes-encryption.html %}
