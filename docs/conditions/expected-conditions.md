@@ -1,14 +1,17 @@
 ---
 layout: default
 title: Expected Conditions
-parent: Verifications
+parent: Conditions
 ---
 
 # Expected Conditions
 
-Expected conditions are kind of soft verifications. But not exactly similar to the soft verification concept as well. 
-They are expectations that may or may not get realised. They do not cause a failure by themselves unless specifically instructed
-to do so by calling a follow up function called ***orElseFail()***
+Expected Conditions are soft conditional checks that can be forced to fail, if the failure should stop the test execution. 
+They are not assertions. If the expected condition fails, it means that your test is broken at some point.
+
+Expected Conditions can be specifically instructed to fail
+by calling a follow up function called ***orElseFail()***
+
 
 Examples:
 

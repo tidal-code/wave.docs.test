@@ -2,7 +2,7 @@
 layout: default
 title: Text Input
 parent: Detailed Docs
-nav_order: 4
+nav_order: 5
 ---
 
 # Text Input Methods

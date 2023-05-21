@@ -2,7 +2,7 @@
 layout: default
 title: Browser Setup
 parent: Detailed Docs
-nav_order: 1.1
+nav_order: 2
 ---
 
 # Browser Setup

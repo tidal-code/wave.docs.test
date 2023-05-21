@@ -2,7 +2,7 @@
 layout: default
 title: Locators
 parent: Detailed Docs
-nav_order: 2
+nav_order: 3
 ---
 
 # Locators
@@ -45,5 +45,12 @@ If it is a partial match you can use `find("div contains name user")`
 
 If the property contains special characters or white spaces, you can enclose them in single quotes
 `find("div contains text 'User Login'")`
+
+
+## Links
+
+For a comprehensive x-path reference, refer this [link](https://devhints.io/xpath){:target='_blank'} <br>
+For CSS selectors, refer this [link](https://saucelabs.com/resources/blog/selenium-tips-css-selectors){:target='_blank'}
+
 
 

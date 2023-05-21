@@ -2,7 +2,7 @@
 layout: default
 title: Hidden Elements
 parent: Detailed Docs
-nav_order: 6
+nav_order: 7
 ---
 
 # When Elements are Not Visible
