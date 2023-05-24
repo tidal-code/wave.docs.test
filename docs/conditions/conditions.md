@@ -25,7 +25,7 @@ find("element").shouldHave(matchingText("Date successfully updated"));
 
 In the above example, you might need to make sure that the date is successfully updated to the database before
 proceeding with the rest of the test steps. If your test fails to satisfy the above condition, we say the test is 
-broken. The reason is that, ensuring the database update in that UI is not the objective of our test. 
+broken. The reason is that, ensuring the database update in that page is not the objective of our test. 
 
 The actual objective of your test is to verify the updated date in a different page. For that, you should use a proper
 test assertion library.

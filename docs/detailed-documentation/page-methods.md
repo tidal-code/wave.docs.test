@@ -5,12 +5,13 @@ parent: Detailed Docs
 nav_order: 13
 ---
 
-# Web Page or Document Related Methods
+# Page or Document (DOM) Related Methods
+
+These are methods which can handle DOM related request like getting the application source code etc.
 
 
 
 ```java
-Page.navigateTo(url);
 Page.refresh();
 Page.title();
 Page.currentUrl();
