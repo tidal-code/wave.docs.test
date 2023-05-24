@@ -55,13 +55,6 @@ In the above code, you are not propogating the reduced wait time. So click would
 
 ***NOTE:*** Every time the find("element") method is invoked, it resets all the previously configured values. 
 
-## Slow Run Option
-
-Sometimes, you would like to slow down a test execution speed a bit to visually observe what is happening the application.
-For that pass the environment variable, or property ***slow.run = true*** to the framework. All the UI interactions will be delayed 
-by one second between each actions. 
-
-You can use your configuration.properties file or set the above value as environment variable with ***System.setProperty("slow.run", true)***
 
 
 
