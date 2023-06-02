@@ -61,7 +61,7 @@ If an element is supposed to disappear from the DOM (hidden or not hidden), you 
 Here, a second locator is not needed as we are checking the condition on the same element.
 
 ### Still Visible
-If an element is supposed not to be visible any more from the DOM, you can use the stillPresent() condition as below:
+If an element is supposed not to be visible any more from the DOM, you can use the stillVisible() condition as below:
 
 ```java
     find("element").click().sendKeys("some value").retryIf(stillVisible);
