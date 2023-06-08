@@ -7,11 +7,13 @@ nav_order: 15
 
 # Special Functions
 
-These functions are quite unique to the Tidal Wave framework. 
+These functions are unique to the Tidal Wave framework. 
 
 ## Retry If
 
 Tidal can retry a set of actions perfomed before if a certain condition is not met. Those conditions are called retry conditions.
+
+NOTE: retry actions will remember only one instance of the action types at a time. For example, if you use `find("element").sendKeys(String1).sendKeys(String2);`, it will remember only the second `sendKeys(String2)` action. This will be improved in the future releases.
 
 ### Not Present
 
@@ -104,7 +106,7 @@ The value can be passed as an environment variable or can be put in the `configu
 This will result in a slower execution. 
 
 NOTE: Do not use this option in your daily test automation runs. This should be used only for debugging purpose or demo purpose 
-when you present your test automation to the stake holders.
+when you present your test automation to the stakeholders.
 
 ## Debug Mode
 New (v - 1.3.0)
