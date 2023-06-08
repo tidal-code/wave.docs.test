@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Tips
+title: General Info
 parent: Detailed Docs
 nav_order: 100
 ---
 
-# Special Tips For Your Reference
+# Some General Information For Your Reference
 
 These are certain tips you might want to remember for UI automation with Tidal framework. 
 The below list is not complete. More will be added later.
@@ -54,6 +54,22 @@ find("element").click();
 In the above code, you are not propogating the reduced wait time. So click would fail with 5 seconds if `element` is not found.
 
 ***NOTE:*** Every time the find("element") method is invoked, it resets all the previously configured values. 
+
+
+## Input not set Error
+
+This error would happen if you do not initiate the Browser instance correctly. If you are using Cucumber, make sure that your hooks 
+are running. 
+
+## Sample Project to Download
+
+Please find below a sample project to download and practice. It contains all the necessary files and folders. There are some 'to_delete' text files in the  folders which can be deleted once you put some code files in there.
+
+Sample project download link:
+
+```java
+git clone git@github.com:tidal-code/example.git
+```
 
 
 

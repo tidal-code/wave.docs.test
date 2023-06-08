@@ -15,7 +15,7 @@ mutli windows and multi tabs testing.
 
 Tidal supports working with multiple windows in the same test. You can open a new window in the middle of the test 
 and switch over to the new one and continue testing. Later if you need, you can switch back to the previous window.
-There is not limit to the number of windows that can be opened. 
+There is no limit to the number of windows that can be opened. 
 
 
 ```java
@@ -31,7 +31,7 @@ Windows.closeWindow(int); //index
 ## Tabs
 Same as windows, Tidal supports working with multiple tabs in the same test. You can open a new tab in the middle of the test 
 and switch over to the new one and continue testing. Later if you need, you can switch back to the previous tab.
-There is not limit to the number of tabs that can be opened. 
+There is no limit to the number of tabs that can be opened. 
 
 
 ```java
