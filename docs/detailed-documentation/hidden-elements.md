@@ -18,7 +18,16 @@ need to bring it to view. For that use
 find("locator").scrollToView();
 ```    
 
+## MoveToElement
 
+Another option is to use the `moveToElement` method. It will bring the element into view and will place the cursor on top of it.
+This function is quite useful when you have internal scrollable panes in the application. ScrollToView may not work with such elements. 
+
+Tip: Using moveToElement() to between the elements on a scrollable pane can simulate a mouse scroll action. 
+
+```java
+find("locator").moveToElement();
+```  
 
 ## Invisible Elements
 
