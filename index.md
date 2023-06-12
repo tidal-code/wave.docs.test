@@ -97,7 +97,7 @@ To run tests in headless mode or to add any other browser options
 ```java
 //this example is for Chrome browser 
 ChromeOptions options = new ChromeOptions();
-options.setHeadless(true);
+options.addArguments("--headless=new");
 Browser.withOptions(options); //add the option
 ```
 
@@ -110,7 +110,7 @@ Browser.type("edge");
 ```java
 // combining all these options as an example for Edge browser
 EdgeOptions options = new EdgeOptions();
-options.setHeadless(true);
+options.addArguments("--headless=new");
 
 Browser.withWaitTime(Duration.ofSeconds(15))
       .type("edge")

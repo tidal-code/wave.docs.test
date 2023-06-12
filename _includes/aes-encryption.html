@@ -90,6 +90,7 @@
 
     <div id="encryption-section" class="section">
         <h2>Encryption</h2>
+
         <br>
         <label for="messageToEncrypt">Value to encrypt:</label>
         <input class="enc" type="text" id="messageToEncrypt">
@@ -102,6 +103,7 @@
         <button type="button" onclick="encrypt()">Encrypt</button>
 
         <h3>Encrypted value:</h3>
+        <small> Just click inside, and the result will be copied to clipboard. </small>
         <textarea class="outputresult" id="encryptedMessage" rows="5"></textarea>
     </div>
 
@@ -116,9 +118,12 @@
         <label for="decryptorKey">Decryption key:</label>
         <input id="decryptorKey" type="text" class="enc">
 
+        <p id="decryptor-error-message" class="error"></p>
+
         <button type="button" onclick="decrypt()">Decrypt</button>
 
         <h3>Decrypted value:</h3>
+        <small> Just click inside, and the result will be copied to clipboard. </small>
         <textarea class="outputresult" id="decryptedMessage" rows="5"></textarea>
     </div>
 
@@ -139,6 +144,7 @@
         }
 
         function decryptWithAes256(encryptedMessage, decryptorKey) {
+
             encryptedMessage = encryptedMessage.replace("ENC(", "");
             encryptedMessage = encryptedMessage.replace(")", "");
             var encryptedData = CryptoJS.enc.Base64.parse(encryptedMessage);
@@ -157,6 +163,7 @@
             );
             var decryptedText = decryptedData.toString(CryptoJS.enc.Utf8);
             return decryptedText;
+
         }
 
 
@@ -168,6 +175,9 @@
                 document.getElementById('error-message').textContent = 'Please fill in both text and key fields.';
                 return;
             }
+
+            document.getElementById('error-message').textContent = '';
+
             var encryptedMessage = encryptWithAes256(messageToEncrypt, encryptorKey);
             document.getElementById('encryptedMessage').value = encryptedMessage;
         }
@@ -176,7 +186,21 @@
             var encryptedMessageToDecrypt = document.getElementById('encryptedMessageToDecrypt').value;
             var decryptorKey = document.getElementById('decryptorKey').value;
 
+            if (!encryptedMessageToDecrypt || !decryptorKey) {
+                document.getElementById('decryptor-error-message').textContent = 'Please fill in both value and key fields.';
+                return;
+            }
+
+            document.getElementById('decryptor-error-message').textContent = '';
+
             var decryptedMessage = decryptWithAes256(encryptedMessageToDecrypt, decryptorKey);
+
+            if(!decryptedMessage){
+                var error_message = "Decryption failed. Please make sure you are using the correct key value pairs.";
+                console.log(error_message);
+                decryptedMessage = error_message;
+            }
+            
             document.getElementById('decryptedMessage').value = decryptedMessage;
         }
 
@@ -189,7 +213,17 @@
             });
         }
 
+        function autoCopyDecryptedTextarea() {
+            const textarea = document.getElementById('decryptedMessage');
+
+            textarea.addEventListener('click', () => {
+                textarea.select();
+                document.execCommand('copy');
+            });
+        }
+
         autoCopyTextarea();
+        autoCopyDecryptedTextarea();
     </script>
 
 </body>
