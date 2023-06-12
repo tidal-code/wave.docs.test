@@ -71,6 +71,7 @@ Sample project download link:
 git clone git@github.com:tidal-code/example.git
 ```
 
+Note: This uses and SSH url and you may need to configure SSH authentication with your system and github
 
 
 
