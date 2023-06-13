@@ -12,7 +12,7 @@ Planned Features:
 
 1. Introducing new debug function. <br>
 2. Introducing new slow run option. <br>
-3. Added waitFor(int) for findElements expected conditions.
+3. Added waitFor(int) for findAll() expected conditions.
 
 ***New Snapshot version `1.3.0-SNAPSHOT' is available for testing***
 

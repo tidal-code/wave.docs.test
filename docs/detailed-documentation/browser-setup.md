@@ -34,7 +34,7 @@ For remote execution if the browser is Chrome; add the following options:
 ```java
 ChromeOptions options = new ChromeOptions();
 options.addArguments("window-size=1920,1080");
-options.setHeadless(true);
+options.addArguments("--headless=new");
 options.addArguments("--no-sandbox");
 options.addArguments("--disable-dev-shm-usage");
 ```
