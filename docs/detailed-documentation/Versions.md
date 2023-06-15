@@ -5,20 +5,11 @@ parent: Detailed Docs
 nav_order: 1
 ---
 
-## Future Releases
+<!-- ## Future Releases -->
 
-<br>
-Planned Features:
 
-1. Introducing new debug function. <br>
-2. Introducing new slow run option. <br>
-3. Added waitFor(int) for findAll() expected conditions.
 
-***New Snapshot version `1.3.0-SNAPSHOT' is available for testing***
-
-<br>
-
-# Current - Version 1.2.9
+# Current - Version 1.3.0
 
 New release
 {: .label .label-purple }
@@ -29,19 +20,31 @@ Maven:
         <dependency>
             <groupId>io.github.tidal-code</groupId>
             <artifactId>wave</artifactId>
-            <version>1.2.9</version>
+            <version>1.3.0</version>
         </dependency>
 ```
 
 Gradle:
 
 ```yml
-implementation group: 'io.github.tidal-code', name: 'wave', version: '1.2.9'
+implementation group: 'io.github.tidal-code', name: 'wave', version: '1.3.0'
 ```
 
-Changes:
-Added functions to find first(), last() and skipFirst() from a collection
+Added slow run mode and debug mode. 
 
+New upload file by drag and drop function has been added.
+`find("element").uploadFileByDragAndDrop("file name");`
+
+New page refresh function has been added.              
+`find("element").doPageRefresh(MaxTime, IntervalTime);`
+
+BugFixes:
+Fixed nullpointer exception for certain user interaction scenarios.
+
+
+### Version 1.2.9
+
+Added functions to find first(), last() and skipFirst() from a collection
 
 
 Bug Fixes:

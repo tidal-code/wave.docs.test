@@ -27,6 +27,29 @@ if(findAll("locator").isPresent()){
 }
 ```
 
+## How to Pause Dropdowns
+
+Open developer tools and navigate to 'Console'.
+Paste the below code into console and press enter.
+
+```javascript
+setTimeout(()=> {debugger;}, 9000)
+```
+
+Now click on the dropdown and wait for the screen to freeze. 
+You can inspect the element now using the browser inspect element tool.
+You can increase or decrease the time '9000' (9 seconds) as per your needs.
+
+## How to open Allure Reports Locally
+
+1. Open Firefox browser.
+2. Type <b>about:config</b> into the URL search bar and press 'Enter'.
+3. Accept the warning.
+4. In the search bar type `security.fileuri.strict_origin_policy`.
+5. Double click its value to change it from 'true' to 'false'.
+6. Extract the allure report and find the 'index.html' file in it.
+7. Open with firefox.
+
 ## Avoid using UIElement and UIElements for too many actions
 
 Since most of the action methods are built as fluent methods which return the instance of UIElement or UIElements,
