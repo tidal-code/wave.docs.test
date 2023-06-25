@@ -27,7 +27,7 @@ if(findAll("locator").isPresent()){
 }
 ```
 
-## How to Pause Dropdowns
+## How to Freeze Dropdowns
 
 Open developer tools and navigate to 'Console'.
 Paste the below code into console and press enter.
@@ -49,6 +49,23 @@ You can increase or decrease the time '9000' (9 seconds) as per your needs.
 5. Double click its value to change it from 'true' to 'false'.
 6. Extract the allure report and find the 'index.html' file in it.
 7. Open with firefox.
+
+
+## How to Kill Chrome Sessions
+
+Windows:
+
+```
+taskkill /F /IM ChromeDriver.exe
+taskkill /F /IM Chrome.exe
+```
+
+Mac OS:
+
+```
+sudo killall chromedriver
+sudo killall Google\ Chrome
+```
 
 ## Avoid using UIElement and UIElements for too many actions
 
