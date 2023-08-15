@@ -10,11 +10,11 @@ nav_order: 4
 The available click methods in the framework are:
 
 ```java
-click();
-doubleClick();
-contextClick();
-actionClick();
-forceClick();
+find("locator").click();
+find("locator").doubleClick();
+find("locator").contextClick();
+find("locator").actionClick();
+find("locator").forceClick();
 ```
 
 **click()**:

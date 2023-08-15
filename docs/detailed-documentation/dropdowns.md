@@ -11,9 +11,9 @@ Typical dropdown with input type as \'select\' can be interacted with using thre
 methods 
 
 ```java
-select(String selectText); //Visible text in the dropdown
-select(String value); //value of select elements
-select(int index); //index value of elements
+find("locator").select(String selectText); //Visible text in the dropdown
+find("locator").select(String value); //value of select elements
+find("locator").select(int index); //index value of elements
 ```
 
 Many web applications may not have dropdown types as \'select\'. You might need to add extra

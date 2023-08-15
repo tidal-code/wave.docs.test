@@ -10,8 +10,8 @@ nav_order: 8
 The available check methods in the framework are:
 
 ```java
-check();
-unCheck();
+find("locator").check();
+find("locator").unCheck();
 ```
 
 You will be able to clik on a checkbox using the `click()` method as well. But it will have a side effect
