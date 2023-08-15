@@ -10,10 +10,10 @@ nav_order: 5
 The available text input methods in the framework are:
 
 ```java
-sendKeys(String text);
-setText(String text);
-setInnerHtml(String text);
-clearAndType(String text);
+find("locator").sendKeys(String text);
+find("locator").setText(String text);
+find("locator").setInnerHtml(String text);
+find("locator").clearAndType(String text);
 ```
 
 **sendKeys(text):**
