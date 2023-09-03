@@ -64,7 +64,7 @@ Tidal is hosted with [Maven Central](https://mvnrepository.com/artifact/io.githu
         <dependency>
             <groupId>io.github.tidal-code</groupId>
             <artifactId>wave</artifactId>
-            <version>1.3.0</version>
+            <version>1.3.1</version>
         </dependency>
 ```
 
