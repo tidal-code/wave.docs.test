@@ -5,11 +5,30 @@ parent: Detailed Docs
 nav_order: 1
 ---
 
-<!-- ## Future Releases -->
+## Future Releases
+
+Under Test Snapshot Version
+{: .label .label-orange }
+
+This snapshot version may get updates and the new experimental functions under test could change without notice.
+No backward compatibility would be provided for these new functions. 
+```xml
+        <dependency>
+            <groupId>io.github.tidal-code</groupId>
+            <artifactId>wave</artifactId>
+            <version>1.3.2-SNAPSHOT</version>
+        </dependency>
+```
+
+1. Table data scraping function (Under development. No API provided).
+
+2. Advanced debug mode.
+
+3. waitFor for findAll has been limited to expected conditions.
 
 
 
-# Current - Version 1.3.0
+# Current - Version 1.3.1
 
 New release
 {: .label .label-purple }
@@ -20,7 +39,7 @@ Maven:
         <dependency>
             <groupId>io.github.tidal-code</groupId>
             <artifactId>wave</artifactId>
-            <version>1.3.0</version>
+            <version>1.3.1</version>
         </dependency>
 ```
 
@@ -29,6 +48,14 @@ Gradle:
 ```yml
 implementation group: 'io.github.tidal-code', name: 'wave', version: '1.3.0'
 ```
+
+Added keyboard multi interaction function.
+
+New `FluentRquest` class for API requests.
+
+
+
+### Version 1.3.0
 
 Added slow run mode and debug mode. 
 
