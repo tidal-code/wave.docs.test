@@ -14,12 +14,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-remote_theme: just-the-docs
+theme: just-the-docs
 title: Tidal. wave
 description: Java based UI Test Automation
 baseurl: ""
 # baseurl: "wave.docs" # the subpath of the site. This should be uncommented and previous line should be commented while pushing to github repo.
-url: "https://tidal-code.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+# url: "https://tidal-code.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"
